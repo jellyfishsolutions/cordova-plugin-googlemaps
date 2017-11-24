@@ -62,7 +62,7 @@ BaseClass.prototype = {
     var i = listeners.length;
     var args = Array.prototype.slice.call(arguments, 1);
 
-    while (i--) {
+    for (var i = 0; i<listeners.length; i++) {
       listeners[i].apply(this, args);
     }
 
